@@ -28,7 +28,7 @@
     *   Create a file named `requirements.txt` in your project directory with the following content:
     ```txt
     fastapi
-    uvicorn[standard]
+    uvicorn
     tensorflow
     Pillow
     numpy
@@ -64,8 +64,6 @@
     *   This will typically open the Streamlit app in your web browser at `http://localhost:8501`.
 
 ## Deployment on EC2
-
-This section summarizes the steps for deploying on an Ubuntu EC2 instance.
 
 1.  **Launch an EC2 Instance:**
     *   Launch an Ubuntu EC2 instance.
@@ -159,7 +157,7 @@ This section summarizes the steps for deploying on an Ubuntu EC2 instance.
     *   **If NOT using Nginx:** Allow ports **8000** and **8501** from `0.0.0.0/0` or your IP.
     *   **If using Nginx:** Allow port **80** (HTTP) and potentially **443** (HTTPS) from `0.0.0.0/0` or your IP.
 
-6.  **(Optional) Configure Nginx Reverse Proxy:**
+6.  **Configure Nginx Reverse Proxy:**
     *   This step sets up Nginx to listen on port 80 and forward traffic to Streamlit on port 8501.
     *   **Install Nginx:**
         ```bash
